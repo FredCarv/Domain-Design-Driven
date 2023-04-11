@@ -1,0 +1,37 @@
+package br.com.fiap.main;
+
+import javax.swing.JOptionPane;
+
+import br.com.fiap.beans.Carro;
+import br.com.fiap.beans.Colaborador;
+import br.com.fiap.beans.Endereco;
+import br.com.fiap.beans.Oficina;
+import br.com.fiap.beans.ParteCarro;
+
+public class TesteOficina {
+
+	public static void main(String[] args) {
+		
+		// Instanciar objetos
+		Oficina objOficina = new Oficina(JOptionPane.showInputDialog("Digite o nome da oficina"),
+				JOptionPane.showInputDialog("Digite o cnpj"));
+		
+		Endereco objEndereco = new Endereco(JOptionPane.showInputDialog("Digite o logradouro"),
+				JOptionPane.showInputDialog("Digite o CEP"),
+				Integer.parseInt(JOptionPane.showInputDialog("Digite o número"));
+		
+		Carro objCarro = new Carro();
+		ParteCarro objParteCarro = new ParteCarro();
+		Colaborador objColaborador = new Colaborador();
+		
+		//colocar os objetos de atributos de referencia
+		objOficina.setEndereco(objEndereco);
+		objOficina.setCarro(objCarro);
+		objOficina.setColaborador(objColaborador);
+		//carro
+		objCarro.setParteCarro(objParteCarro);
+		
+
+	}
+
+}

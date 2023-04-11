@@ -1,0 +1,29 @@
+package br.com.fiap.main;
+
+import br.com.fiap.beans.Carro;
+import br.com.fiap.beans.Colaborador;
+import br.com.fiap.beans.Endereco;
+import br.com.fiap.beans.Oficina;
+import br.com.fiap.beans.ParteCarro;
+
+public class TesteOficina {
+
+	public static void main(String[] args) {
+		
+		// Instanciar objetos
+		Oficina objOfifcina = new Oficina();
+		Endereco objEndeerco = new Endereco();
+		Carro objCarro = new Carro();
+		ParteCarro objParteCarro = new ParteCarro();
+		Colaborador objColaborador = new Colaborador();
+		
+		//colocar os objetos de atributos de referencia
+		objOficina.setEndereco(objEndereco);
+		objOficina.setCarro(objCarro);
+		objOficina.setColaborador(objColaborador);
+		//carro
+		objCarro.setParteCarro(objParteCarro);
+
+	}
+
+}
