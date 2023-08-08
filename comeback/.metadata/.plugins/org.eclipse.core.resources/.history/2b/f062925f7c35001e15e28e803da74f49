@@ -1,0 +1,12 @@
+package br.com.fiap.main;
+
+public class Teste {
+
+	static 
+	
+	public static void main(String[] args) {
+		// instanciar objetos
+		
+	}
+
+}
