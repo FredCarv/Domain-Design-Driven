@@ -1,0 +1,25 @@
+package br.com.fiap.main;
+
+import javax.swing.JOptionPane;
+
+public class While {
+	
+	static String texto(String j) {
+		return JOptionPane.showInputDialog(j);
+	}
+	
+	static int inteiro (String j) {
+		return Integer.parseInt(JOptionPane.showInputDialog(j));
+	}
+	
+	static double decimal (String j) {
+		return Float.parseFloat(JOptionPane.showInputDialog(j));
+	}
+	
+	public static void main(String[] args) {
+
+		
+
+	}
+
+}

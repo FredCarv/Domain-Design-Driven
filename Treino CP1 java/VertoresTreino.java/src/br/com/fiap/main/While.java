@@ -1,0 +1,54 @@
+package br.com.fiap.main;
+
+import javax.swing.JOptionPane;
+
+import br.com.fiap.beans.Produto;
+
+public class While {
+	
+	static String texto(String j) {
+		return JOptionPane.showInputDialog(j);
+	}
+	
+	static int inteiro (String j) {
+		return Integer.parseInt(JOptionPane.showInputDialog(j));
+	}
+	
+	static double decimal (String j) {
+		return Float.parseFloat(JOptionPane.showInputDialog(j));
+	}
+	
+	public static void main(String[] args) {
+
+		Produto[] vetorProduto = new Produto[3];
+		
+		int indice = 0;
+		
+		int continuar = 0;
+		
+		while (continuar == 0) {
+			vetorProduto[indice] = new Produto();
+			vetorProduto[indice].setTipo(texto("Qual o tipo de produto: "));
+			vetorProduto[indice].setMarca(texto("Qual a marca do produto "));
+			vetorProduto[indice].setQuantidade(inteiro("Qual a quantidade de produtos: "));
+			vetorProduto[indice].setValor(decimal("Qual o valor do produto: "));
+			
+			indice++;
+			
+			continuar = JOptionPane.showConfirmDialog(null, "Adicionar produto no carrinho?", 
+					"Carrinho de compras", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+		}
+		
+		for(int contador = 0; contador < indice; contador++) {
+			
+			System.out.println("----------------------" 
+					+"\nTipo de produto: " + vetorProduto[contador].getTipo() 
+					+"\nMarca: " + vetorProduto[contador].getMarca() 
+					+"\nQuantidade: " + vetorProduto[contador].getQuantidade() 
+					+"\nValor: " + vetorProduto[continuar].getValor());
+			
+		}
+
+	}
+
+}
